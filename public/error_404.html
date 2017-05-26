@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - error404</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshop">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <style>
+        body{
+            background-color: #fff;
+            height: 100%;
+        }
+        .errorMain{
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .errorMain img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="clearfix">
+
+    <!--error -->
+    
+    <div class="errorMain">
+        <img src="images/404.png" alt="">
+        <p class="tc" style="font-size: 2rem;margin-top: 45px">抱歉= . = 您访问的页面不存在</p>
+        <p class="tc" style="font-size: 2rem;margin-top: 45px">5秒后 <a href="">回到首页</a> </p>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        var winH = $(window).height();
+        $("body").css("height",winH);
+        var imgH = $(".errorMain").height();
+        var imgW = $(".errorMain").width();
+        console.log(winH);
+        $(".errorMain").css({"margin-top":-(imgH/2),"margin-left":-(imgW/2)});
+    </script>
+
+</body>
+</html>

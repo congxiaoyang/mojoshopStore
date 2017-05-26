@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 登录</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <header class="register">
+        <div class="headInner clearfix">
+            <div class="logo fl">
+
+                <a href="#"><img src="../public/images/logo.png" alt=""></a>
+
+            </div>
+        </div>
+    </header>
+
+
+    <div class="main loginMain">
+
+        <div class="mainInner">
+
+            <div class="">
+                <form action="" class="">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h4 class="modal-title" id="myModalLabel"><img src="../public/images/loginTitle.png" alt=""></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="input-group-email input-group clearfix">
+                                        <span id="hint"></span>
+                                        <div class="fl img"><img src="../public/images/email.png" alt=""></div>
+                                        <div class="fl input"><input type="text" id="email"></div>
+                                    </div>
+                                    <div class="input-group-pwd input-group clearfix mt-30">
+                                        <div class="fl img"><img src="../public/images/key.png" alt=""></div>
+                                        <div class="fl input"><input type="password" id="loginPwd"></div>
+                                    </div>
+                                    <div class="clearfix mt-30">
+                                        <div class="bar3 bar loginValidate"></div>
+                                    </div>
+                                    <div class="btnBox mt-30 clearfix">
+                                        <a href="retrievePwd.html" class="fl">找回密码</a>
+                                        <a href="../enter/enter.html" class="fr">入驻</a>
+                                    </div>
+                                    <div class="loginBtn mt-30">
+                                        <a href="javascript:void(0)" class="pubBtn1" id="login">登录</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../public/js/jquery-3.1.1.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/plugins/notice.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        //  滑块 配置项
+
+
+        $('.loginValidate').slideToUnlock({
+            text : '滑动解锁',
+            progressColor : '#979797',
+            succText : '解锁成功',
+            succColor: '#4a4a4a',
+            textColor : '#000',
+            succTextColor : '#fff'
+        });
+    </script>
+
+</body>
+</html>

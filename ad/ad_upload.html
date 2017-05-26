@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 广告上传</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ad.css">
+
+
+</head>
+<body>
+
+<header class="storeHead">
+</header>
+
+<div class="view clearfix">
+    <aside class="main-sidebar">
+    </aside>
+
+    <div class="storeMain goodsChangeMain adChangeMain adUploadMain">
+
+        <div class="mainInner">
+
+            <div class="formBox">
+
+                <form action="" class="form-horizontal">
+
+                    <div class="itemBox">
+
+                        <div>
+
+                            <div class="form-group bannerContainer" style="margin-bottom: 60px">
+                                <h6>广告图</h6>
+                                <div class="tc">
+                                    <input type="file" id="adBannerUploadBtn" accept=".gif,.jpg,.jpeg,.png" name="file" style="height: 100%">
+                                    <img src="" id="adBannerUploadPic" alt="">
+
+                                    <span class="hintMsg"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group selectStatus" style="margin-left: 18%">
+                                <label for="">选择状态</label>
+                                <div class="clearfix">
+                                    <div class="radio col-lg-5 col-md-5 col-sm-5 col-xs-5 fl">
+                                        <label for="putaway"></label>
+                                        <input type="radio" name="status" id="putaway" value="1" checked>上架
+                                    </div>
+
+                                    <div class="radio col-lg-5 col-md-5 col-sm-5 col-xs-5 fr">
+                                        <label for="downaway"></label>
+                                        <input type="radio" name="status" value="0" id="downaway">下架
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="submitBtn tc">
+
+                        <a href="ad_search.html" class="myBtn myBtn3" id="uploadSubmit" data-toggle="modal" data-target=".bs-example-modal-sm">完成</a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+<script src="../public/js/menu.js"> </script>
+<script>
+    $.menuLoad("../");
+</script>
+<script src="../public/js/public.js"></script>
+<script>
+    $.headLoad("../")
+</script>
+<script src="js/ad_upload.js"></script>
+</body>
+</html>

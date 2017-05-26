@@ -1,0 +1,32 @@
+
+/*   登录 页面样式，和 mojoshop的登录布局大致相同 */
+
+.loginMain{
+    background: url("../../public/images/login_bg.jpg") no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+
+
+/* 找回密码 */
+
+.formBox .itemBox>div .form-code-group>div input,
+.formBox .form-code-group>div a{
+    width: 45%;
+}
+
+.formBox .form-code-group>div a{
+    font-size: 1.4rem;
+    height: 50px;
+    line-height: 50px;
+}
+
+.retrievePwdMain .formBox .itemBox{
+    border-bottom: none;
+    margin-top: 100px;
+}
+
+body .btn-default:hover,
+body .btn-default:focus{
+    background-color: #4a4a4a!important;
+}

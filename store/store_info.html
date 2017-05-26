@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 商铺信息</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/store.css">
+
+</head>
+<body>
+
+<header class="storeHead">
+
+</header>
+
+<div class="view clearfix">
+
+    <aside class="main-sidebar">
+    </aside>
+
+    <div class="storeMain">
+
+        <div class="mainInner">
+
+            <section class="storeInfoContainer">
+                <form action="" class="form-horizontal ">
+
+                    <section class="top clearfix">
+
+                        <div class="block-center">
+                            <h5 class="tc">商家logo</h5>
+                            <div class="storeLogo">
+
+                                <img src="../public/images/pictures.png" id="storeLogo" alt="">
+                            </div>
+                        </div>
+
+                        <div class="storeInfo block-center">
+                            <!--<h4 id="storeName" class="tc"></h4>-->
+
+                            <div class="clearfix timeBox">
+                                <h5 class="fl">店铺名称</h5>
+                                <div class="fl">
+                                    <p id="storeName"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix timeBox">
+                                <h5 class="fl">营业时间</h5>
+                                <div class="fl">
+                                    <p>AM &nbsp;&nbsp; <span id="amTime"></span></p>
+                                    <p>PM &nbsp;&nbsp; <span id="pmTime"></span></p>
+                                </div>
+                            </div>
+                            <div class="clearfix timeBox">
+                                <h5 class="fl">商家链接</h5>
+                                <div class="fl">
+                                    <p  class="relative storeUrl"><span id="storeUrl"></span>&nbsp;&nbsp; <input type="button" value="复制" id="copy"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <div class="mt-30">
+                        <h5 class="tc">商家简介</h5>
+                        <section class="introBox" id="storeIntro">
+                            <p></p>
+                        </section>
+                    </div>
+
+
+
+                    <div class="tc mt-50">
+                        <a href="store_info_change.html" class="myBtn myBtn1">更改</a>
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+<script src="../public/js/menu.js"> </script>
+<script>
+    $.menuLoad("../");
+</script>
+<script src="../public/js/public.js"></script>
+<script>
+    $.headLoad("../")
+</script>
+<script src="js/store.js"></script>
+
+</body>
+</html>

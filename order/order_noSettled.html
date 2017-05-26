@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 未结算订单查询</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="../public/css/plugins/jquery.dialogbox.css">
+
+</head>
+<body>
+
+<header class="storeHead">
+
+</header>
+
+<div class="view clearfix">
+    <aside class="main-sidebar">
+    </aside>
+
+    <div class="storeMain orderSearchMain">
+
+        <div class="mainInner">
+
+            <div class="searchBox clearfix">
+                <div class="fl input"><input type="text" id="search" placeholder="搜索 订单号"></div>
+                <div class="fr searchIcon"><a href="javascript:void (0)"><img src="../public/images/searchPic.png" alt=""></a></div>
+            </div>
+
+            <div class="pubList">
+                <table>
+                    <thead>
+
+                    <tr>
+
+                        <td>编号</td>
+                        <td>商品图片</td>
+                        <td>商品名称</td>
+                        <td>数量</td>
+                        <td>金额</td>
+                        <td>支付状态</td>
+                        <td>下单时间</td>
+                        <td>买家</td>
+                        <td>买家留言</td>
+                        <td>操作</td>
+
+                    </tr>
+
+                    </thead>
+                    <tbody id="orderNoSettled">
+
+                    </tbody>
+                </table>
+
+                <div id="page" class="page">
+
+                </div>
+
+            </div>
+
+            <div id="btn-dialogBox"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+<script src="../public/js/plugins/jquery.dialogBox.js"></script>
+<script src="../public/js/menu.js"> </script>
+<script>
+    $.menuLoad("../");
+</script>
+<script src="../public/js/public.js"></script>
+<script>
+    $.headLoad("../")
+</script>
+<script src="js/order_noSettled.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 已退款查询 </title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../public/css/plugins/jquery.dialogbox.css">
+    <link rel="stylesheet" href="css/refund.css">
+
+</head>
+<body>
+
+<header class="storeHead">
+
+</header>
+
+<div class="view clearfix">
+    <aside class="main-sidebar">
+
+    </aside>
+
+    <div class="storeMain orderSearchMain refundingMain">
+
+        <div class="mainInner">
+
+            <div class="pubList">
+                <table>
+                    <thead>
+
+                    <tr>
+
+                        <td>编号</td>
+                        <td>退款原因</td>
+                        <td>退款说明</td>
+                        <td>账户类型</td>
+                        <td>账户</td>
+                        <td>姓名</td>
+                        <td>商户ID</td>
+                        <td>上传图片</td>
+                        <td>商品名称</td>
+                        <td>金额</td>
+                        <td>创建时间</td>
+                        <td>退款处理</td>
+                        <td>操作</td>
+                    </tr>
+
+                    </thead>
+                    <tbody id="searchList">
+
+                    </tbody>
+                </table>
+
+                <div id="page" class="page">
+
+                </div>
+
+            </div>
+
+            <div id="btn-dialogBox"></div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/plugins/laypage.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+<script src="../public/js/plugins/jquery.dialogBox.js"></script>
+<script src="../public/js/menu.js"> </script>
+<script>
+    $.menuLoad("../");
+</script>
+<script src="../public/js/public.js"></script>
+<script>
+    $.headLoad("../")
+</script>
+<script src="js/refunded.js"></script>
+
+</body>
+</html>

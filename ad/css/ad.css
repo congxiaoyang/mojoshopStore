@@ -1,0 +1,75 @@
+
+/*  所有的广告页面的样式都写在这个样式表里  */
+
+/* 广告查询  样式  */
+
+.ad_searchMain table .ad_banner{
+    width: 30%;
+}
+
+.ad_searchMain table .ad_banner img{
+    width: 90%;
+}
+.ad_searchMain table .operateIcon a{
+    display: inline-block;
+}
+
+.ad_searchMain table .operateIcon a:last-of-type{
+    margin-left: 80px;
+}
+
+
+/* 广告 - 修改 */
+
+.adChangeMain .formBox{
+    width: 81.63%;
+}
+
+.adChangeMain .formBox  .itemBox{
+    padding-right: 0;
+}
+
+.adChangeMain .formBox .itemBox .bannerContainer>div{
+    width: 76%;
+    margin: 0 auto;
+    height: 400px;
+    float: none;
+}
+.adChangeMain .formBox .itemBox .bannerContainer h6{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.adChangeMain .formBox .itemBox .bannerContainer>div img{
+    width: 100%;
+    height: 100%;
+}
+
+.adChangeMain .formBox .itemBox .selectStatus{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.adChangeMain .formBox .itemBox .selectStatus .radio{
+    background-color: #f2f2f2;
+}
+
+.adChangeMain .formBox .itemBox .selectStatus .radio input{
+    margin-right: 20px;
+    margin-left: -36px;
+}
+
+
+/* 广告 - 上传 */
+
+.adUploadMain .bannerContainer>div{
+    background-color: #f2f2f2;
+    height: 400px;
+    background-image: url(../../public/images/uploadBig.png);
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.adUploadMain .bannerContainer>div img{
+    height: 100%;
+}

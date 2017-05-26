@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 商铺信息修改</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/store.css">
+    <link rel="stylesheet" href="../public/css/plugins/bootstrap-clockpicker.min.css">
+
+</head>
+<body>
+
+<header class="storeHead">
+</header>
+
+<div class="view clearfix">
+    <aside class="main-sidebar">
+    </aside>
+
+    <div class="storeMain">
+
+        <div class="mainInner">
+
+            <!--<div class="row">-->
+                <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
+                    <!--<p>创建时间：<span>2017-4-1</span></p>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
+                    <!--<p class="tc">上次登录时间：<span>2017-4-30</span></p>-->
+                <!--</div>-->
+                <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
+                    <!--<p class="text-right">店铺状态：<span class="active">正常营业</span></p>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <section class="storeInfoContainer storeInfoChangeContainer">
+                <form action="" class="form-horizontal ">
+
+                    <section class="top clearfix">
+
+                        <div class="block-center">
+                            <h5 class="tc fs-18">商家logo</h5>
+                            <div class="storeLogo squareBox">
+                                <img src="" id="storeLogo" alt="">
+                                <input type="file" name="file" class="squareBox" id="file">
+                            </div>
+                        </div>
+
+                        <div class="storeInfo block-center">
+                            <!--<h4 id="storeName" class="tc"></h4>-->
+
+                            <div class="clearfix timeBox">
+                                <h5 class="fl">商家名称</h5>
+                                <div class="fl">
+                                    <input type="text" maxlength="10" id="storeName">
+                                </div>
+                            </div>
+                            <div class="clearfix timeBox">
+                                <h5 class="fl">营业时间</h5>
+                                <div class="fl">
+                                    <div class="form-group">
+                                        <label for="">AM</label>
+
+                                        <input type="text" class="time-input" id="am_startTime" style="width: 30%"/>
+                                        <span>—</span>
+                                        <input type="text" class="time-input" id="am_endTime" style="width: 30%"/>
+                                    </div>
+                                    <div class="form-group" style="margin-top: 30px">
+                                        <label for="">PM</label>
+
+                                        <input type="text" class="time-input" id="pm_startTime" style="width: 30%"/>
+                                        <span>—</span>
+                                        <input type="text" class="time-input" id="pm_endTime" style="width: 30%"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <div class="mt-30">
+                        <h5 class="tc fs-18">商家简介</h5>
+                        <section class="">
+
+                            <textarea name="" id="storeIntro" class="mt-20 wid-100" rows="6"  maxlength="200" placeholder="商家简介（200字以内）"></textarea>
+                        </section>
+                    </div>
+
+
+
+                    <div class="tc mt-50">
+                        <a href="javascript:void(0)" id="submit" class="myBtn myBtn1">更改</a>
+                    </div>
+
+                </form>
+
+            </section>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+<script src="../public/js/plugins/bootstrap-clockpicker.min.js"></script>
+<script src="../public/js/menu.js"> </script>
+<script>
+    $.menuLoad("../");
+</script>
+<script src="../public/js/public.js"></script>
+<script>
+    $.headLoad("../")
+</script>
+<script src="js/store_info_change.js"></script>
+
+<script>
+    $('.time-input').clockpicker({
+        autoclose: true
+    });
+//
+//    if (something) {
+//        // Manual operations (after clockpicker is initialized).
+//        $('.time-input').clockpicker('show') // Or hide, remove ...
+//            .clockpicker('toggleView', 'minutes');
+//    }
+</script>
+</body>
+</html>

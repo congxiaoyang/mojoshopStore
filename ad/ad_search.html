@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 广告查询</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../public/css/plugins/jquery.dialogbox.css">
+    <link rel="stylesheet" href="css/ad.css">
+    <script src="../public/js/jquery-3.1.1.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<header class="storeHead">
+</header>
+
+<div class="view clearfix">
+    <aside class="main-sidebar">
+    </aside>
+
+    <div class="storeMain ad_searchMain">
+
+        <div class="mainInner">
+
+            <div class="pubList">
+                <table>
+                    <thead>
+
+                    <tr>
+
+                        <td>广告图</td>
+                        <td>创建时间</td>
+                        <td class="name">更新时间</td>
+                        <td class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown-menu">状态 <b class="caret"></b></a>
+                            <ul class="dropdown-menu hide">
+                                <li><a href="#" data-value="1" class="status_search" id="putaway_search">上架</a></li>
+                                <li><a href="#" data-value="0" class="status_search" id="soldOut_search">下架</a></li>
+
+                            </ul>
+
+                        </td>
+                        <td>操作</td>
+
+                    </tr>
+
+                    </thead>
+                    <tbody id="ad_search">
+
+
+                    </tbody>
+                </table>
+
+                <div id="page" class="page">
+
+                </div>
+
+            </div>
+
+            <div id="btn-dialogBox"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../public/js/plugins/laypage.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+<script src="../public/js/plugins/jquery.dialogBox.js"></script>
+<script src="../public/js/menu.js"> </script>
+<script>
+    $.menuLoad("../");
+</script>
+<script src="../public/js/public.js"></script>
+<script>
+    $.headLoad("../");
+
+</script>
+<script src="js/ad_search.js"></script>
+</body>
+</html>

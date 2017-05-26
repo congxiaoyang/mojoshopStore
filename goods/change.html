@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 商品修改</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/goods.css">
+
+    <script type="text/javascript">
+        var record={
+            num:""
+        };
+        var checkDecimal=function(n){
+            var decimalReg=/^\d{0,8}\.{0,1}(\d{1,2})?$/;//var decimalReg=/^[-\+]?\d{0,8}\.{0,1}(\d{1,2})?$/;
+            if(n.value!=""&&decimalReg.test(n.value)){
+                record.num=n.value;
+            }else{
+                if(n.value!=""){
+                    n.value=record.num;
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="storeHead">
+    </header>
+
+    <div class="view clearfix">
+        <aside class="main-sidebar">
+        </aside>
+
+        <div class="storeMain goodsChangeMain">
+            <div class="mainInner">
+
+                <div class="formBox">
+
+                    <form action="" class="form-horizontal">
+                        <div class="itemBox">
+
+                            <div>
+
+                                <div class="form-group">
+                                    <label for="">商品图片</label>
+                                    <div class="tc">
+                                        <div class="storePic">
+                                            <input type="file" id="goodsPicBtn" name="file" style="height: 100%">
+                                            <img src="../public/images/pictures.png" id="goodsPic" alt="">
+                                        </div>
+
+                                        <span class="hintMsg"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">商品价格</label>
+                                    <div>
+                                        <input type="text" id="price" maxlength="10" onkeyup='checkDecimal(this)' >
+                                        <span class="hintMsg"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">商品名称</label>
+                                    <div>
+                                        <input type="text" id="goodsName">
+                                        <span class="hintMsg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">选择状态</label>
+                                    <div class="clearfix">
+                                        <div class="radio col-lg-5 col-md-5 col-sm-5 col-xs-5 fl">
+                                            <label for="putaway">上架</label>
+                                            <input type="radio" value="1" name="status" id="putaway">
+                                        </div>
+
+                                        <div class="radio col-lg-5 col-md-5 col-sm-5 col-xs-5 fr">
+                                            <label for="downaway">下架</label>
+                                            <input type="radio" value="0" name="status" id="downaway">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="submitBtn tc">
+
+                            <a href="search.html" class="myBtn myBtn3" id="changeSubmit" data-toggle="modal" data-target=".bs-example-modal-sm">完成</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/js/jquery-3.1.1.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/plugins/notice.js"></script>
+    <script src="../public/js/menu.js"> </script>
+    <script>
+        $.menuLoad("../");
+    </script>
+    <script src="../public/js/public.js"></script>
+    <script>
+        $.headLoad("../")
+    </script>
+    <script src="js/change.js"></script>
+
+
+</body>
+</html>

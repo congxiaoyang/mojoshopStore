@@ -1,0 +1,12 @@
+
+/* 订单查询 */
+
+.order_settledMain .pubList table td{
+    width: 6.25%;
+    font-size: 1.2rem;
+    word-break:break-all;
+}
+
+.order_settledMain .pubList table td img{
+    width: 100%;
+}

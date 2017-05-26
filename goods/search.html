@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 商品查询</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../public/css/plugins/jquery.dialogbox.css">
+
+</head>
+<body>
+
+<header class="storeHead">
+</header>
+
+<div class="view clearfix">
+    <aside class="main-sidebar">
+    </aside>
+
+    <div class="storeMain">
+
+        <div class="mainInner">
+
+            <div class="searchBox clearfix">
+                <div class="fl input"><input type="text" id="search" placeholder="商品名称"></div>
+                <div class="fr searchIcon"><a href="javascript:void (0)" id="searchBtn"><img src="../public/images/searchPic.png" alt=""></a></div>
+            </div>
+
+            <div class="pubList">
+                <table>
+                    <thead>
+
+                        <tr>
+
+                            <td>编号</td>
+                            <td>商品图</td>
+                            <td class="name">名称</td>
+                            <td>价格</td>
+                            <td class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-menu">状态 <b class="caret"></b></a>
+                                <ul class="dropdown-menu hide">
+                                    <li><a href="#" data-value="1" class="status_search" id="putaway_search">上架</a></li>
+                                    <li><a href="#" data-value="0" class="status_search" id="soldOut_search">下架</a></li>
+
+                                </ul>
+
+                            </td>
+                            <td>创建时间</td>
+                            <td>更新时间</td>
+                            <td>操作</td>
+
+                        </tr>
+
+                    </thead>
+                    <tbody id="goodsSearch_tbody">
+
+
+                    </tbody>
+                </table>
+
+                <div class="hidden tableHint_dataError tc">
+                    <p>- 暂时没有数据 -</p>
+                </div>
+
+                <div class="hidden tableHint_netError tc">
+                    <p>- 网络故障 -</p>
+                </div>
+
+                <div id="page" class="page">
+
+                </div>
+
+            </div>
+
+            <div id="btn-dialogBox"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+<script src="../public/js/plugins/laypage.js"></script>
+<script src="../public/js/plugins/jquery.dialogBox.js"></script>
+<script src="js/search.js"></script>
+<script src="../public/js/menu.js"> </script>
+<script>
+    $.menuLoad("../");
+</script>
+<script src="../public/js/public.js"></script>
+<script>
+    $.headLoad("../")
+</script>
+
+
+</body>
+</html>

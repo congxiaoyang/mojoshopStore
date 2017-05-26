@@ -1,0 +1,183 @@
+/* 店铺修改 和 店铺信息展示都用到此css文件*/
+
+.infoContainer{
+    width: 56.93%;
+    margin: 20px auto;
+}
+.infoContainer .form-group{
+    margin-bottom: 30px;
+}
+
+.infoContainer .form-group>label {
+    width: 28.4%;
+    text-align: right;
+    float: left;
+}
+
+.infoContainer .form-group>div{
+    width: 61.31%;
+    float: right;
+}
+
+.infoContainer .form-group>div>input{
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.infoContainer .form-group>div p{
+    font-size: 1.8rem;
+    line-height: 50px;
+}
+
+
+ /* 商铺信息 */
+
+.storeInfoContainer{
+    width: 45%;
+    margin: 20px auto 0 auto;
+}
+
+.storeInfoContainer .storeLogo{
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    width: 34.09%;
+    padding-bottom: 34.09%;
+    border:1px solid #ccc;
+}
+.storeInfoContainer .storeLogo input{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.storeInfoContainer .storeLogo img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+
+}
+/*.storeInfoContainer .storeInfo{*/
+    /*margin-left: 14.43%;*/
+    /*width: 32%;*/
+/*}*/
+
+.storeInfoContainer .storeInfo{
+    width: 50%;
+}
+
+.storeInfoContainer .storeInfo .timeBox{
+    margin-top: 30px;
+}
+
+.storeInfoContainer .storeInfo .timeBox p,
+.storeInfoContainer .storeInfo .timeBox h5{
+    font-size: 1.4rem;
+}
+.storeInfoContainer .storeInfo .timeBox>div{
+    margin-left: 30px;
+    width: 60%;
+}
+.storeInfoContainer .storeInfo .timeBox>div p{
+    word-break: break-all;
+}
+.storeInfoContainer .storeInfo .timeBox>div p.storeUrl input{
+    position: absolute;
+    right: -60px;
+    top: 5.5px;
+}
+.storeInfoContainer .storeInfo .timeBox>div p:nth-child(2){
+    margin-top: 30px;
+}
+.storeInfoContainer .introBox{
+    margin-top: 20px;
+    border:1px solid #d8d8d8;
+    padding: 16px;
+}
+
+/*商铺信息 修改*/
+
+.storeInfoChangeContainer .introBox{
+    border:none;
+    padding: 0;
+}
+
+.storeInfoChangeContainer .introBox textarea{
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    max-height: 300px;
+    padding: 30px;
+    font-size: 1.6rem;
+}
+
+
+/*  商户表单验证 采用的bs 中的 bv  */
+
+.bv-form .help-block{
+    margin-bottom: 0;
+    position: absolute;
+    left: 39%;
+    bottom: -22px;
+}
+
+/* 和商家入驻一样，二级联动样式 */
+
+.formBox .form-group select {
+    height: 50px;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.formBox .form-group .linkage select {
+    width: 45%;
+}
+
+body .formBox .dropdown-toggle{
+    color: #4a4a4a!important;
+    border-radius: 0;
+    border:1px solid #979797;
+}
+body .formBox .dropdown-menu{
+    left: 0;
+}
+.col-sm-4, .col-md-4, .col-lg-4{
+    padding: 0;
+}
+.form-control-feedback{
+    top:9px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+/* 商铺信息修改 */
+
+.storeInfoChangeContainer label{
+    line-height: normal;
+    font-size: 1.4rem;
+}
+
+
+.city_select ul li{
+    float: left;
+    margin-right: 20px;
+}
+
+.city_select ul li:first-of-type{
+    margin-left: 0;
+}
+.city_select ul li label{
+    font-size: 1.4rem;
+    line-height: 50px;
+    padding-left: 0;
+}
+
+.city_select ul li div input{
+    margin-top: 0;
+}

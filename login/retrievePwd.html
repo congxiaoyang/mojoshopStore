@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoJoshop - 找回密码</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes" />
+    <meta name="keywords" content="摩捷国际科技（北京）有限公司，MoJoshopStore">
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico">
+
+    <link rel="stylesheet" href="../public/css/basic.css">
+    <link rel="stylesheet" href="../public/css/public.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+
+<header class="storeHead">
+
+    <div class="headInner clearfix">
+        <div class="logo fl">
+            <a href="#"><img src="../public/images/logo.png" alt=""></a>
+        </div>
+        <div class="fr">
+            <div class="text-right col-lg-6 col-md-6 col-sm-6">
+                 <a href="#" class="text-right">帮助中心</a>
+            </div>
+            <div class="text-right col-lg-6 col-md-6 col-sm-6">
+                <a href="login.html" class="text-right">登录</a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<div class="view clearfix">
+
+    <div class="main retrievePwdMain storeMain">
+        <div class="mainInner">
+
+            <div class="formBox">
+
+                <form action="" class="form-horizontal">
+                    <div class="itemBox">
+
+                        <div>
+                            <div class="form-group">
+                                <label for="">邮箱</label>
+                                <div>
+                                    <input type="text" id="email">
+                                    <span class="hintMsg"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group form-code-group">
+                                <label for="">验证码</label>
+                                <div class="clearfix">
+                                    <input type="text" class="fl" id="code" placeholder="">
+                                    <a href="javascript:void(0)" class="sendCodeToEmail fr btn-default btn" role="button" id="sendCodeToEmail">发送验证码</a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">新密码</label>
+                                <div>
+                                    <input type="password" id="pwd" >
+                                    <span class="hintMsg"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">确认密码</label>
+                                <div>
+                                    <input type="password" id="confirmPwd">
+                                    <span class="hintMsg"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="submitBtn tc">
+                        <a href="javascript:void(0)" class="myBtn myBtn1" id="submit">完成</a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../public/js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/plugins/notice.js"></script>
+
+<script src="../public/js/public.js"></script>
+<script>
+//    $.headLoad("../");
+</script>
+
+<script src="js/retrievePwd.js"></script>
+
+</body>
+</html>
