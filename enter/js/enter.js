@@ -242,7 +242,7 @@ $("#idCard").blur(function () {
 
 var phoneTF=0;
 $("#phone").blur(function () {
-    var pwdReg = /^[0-9]*$/;
+    var pwdReg = /^1[34578]\d{9}$/;
     var phone = $(this).val();
     if(!pwdReg.test(phone)||phone ==""){
         $(this).siblings("span").html("手机号格式错误或者为空");
@@ -253,7 +253,7 @@ $("#phone").blur(function () {
 
 var reservePhoneTF=0;
 $("#reservePhone").blur(function () {
-    var pwdReg = /^[0-9]*$/;
+    var pwdReg = /^1[34578]\d{9}$/;
     var phone = $(this).val();
     if(!pwdReg.test(phone)||phone ==""){
         $(this).siblings("span").html("手机号格式错误或者为空");
@@ -317,6 +317,7 @@ $("#enterSubmit").click(function () {
                 "name":realName,
                 "card":idCard,
                 "tel":phone,
+                "reserveNo":reservePhone,
                 "liveAddress":addr,
                 "storeName":storeName,
                 "storeType":storeType,
@@ -328,35 +329,14 @@ $("#enterSubmit").click(function () {
                 "file":imgBase64
             },
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
-            timeout:5000,
             success:function (arr) {
                 if(arr.status==200){
+
                     notie.alert(1, '注册成功!', 2);
 
-                    $.ajax({
-                        url: CONFIG.url+'/api/createDemoUser',
-                        type: 'POST',
-                        data: {
-                            "email":email,
-                            "password":pwd
-                        },
-                        contentType: 'application/x-www-form-urlencoded',
-                        beforeSend: function (req) {
-                            req.setRequestHeader('appkey', CONFIG.appkey);
-                        },
-                        success: function(data) {
-                            if (data.res === 200) {
-                                alert("云信聊天服务配置好了");
-                                window.location.href = '../../login/login.html';
-                            }else{
-                                notie.alert(3, '聊天服务繁忙，请稍后重试', 2);
-                            }
-                        },
-                        error: function() {
-                            notie.alert(3, '聊天服务繁忙，请稍后重试', 2);
-                        }
-                    });
-
+                    setTimeout(function () {
+                        window.location.href = "../../../mojoshopStore/store/store_info.html"
+                    },800)
 
                 }else{
                     // window.location.href = "../../../login/login.html";

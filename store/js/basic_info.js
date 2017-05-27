@@ -22,12 +22,11 @@ $(function () {
                 $("#name").text(data.userName);
                 $("#email").text(data.email);
                 $("#phone").text(data.tel);
-                $("#reservePhone").text();
+                $("#reservePhone").text(data.reserveNo);
                 $("#idCard").text(data.card);
                 $("#passport").text(data.passPortNo);
                 $("#addr").text(data.address);
                 $("#succ").text(data.creditNoCode);
-
                 // 商品分类
 
                 var goodsType;

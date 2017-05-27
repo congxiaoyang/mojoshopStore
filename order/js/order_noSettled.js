@@ -61,7 +61,7 @@ function pageLoad(curr,putawayStatus) {
 
 
                         str += '<tr data-id = "' + data[i].id+'">' +
-                            '<td>'+ data[i].timeStampId +'</td> ' +   //编号
+                            '<td>'+ data[i].id +'</td> ' +   //编号
                             '<td><img src="' + data[i].images + '" alt="图片加载失败"></td> ' +  // 图片
                             '<td class="name">'+ data[i].title +'</td> ' +  // 商品名称
                             '<td>'+ data[i].counts +'</td> ' +  // 商品数量
@@ -69,7 +69,7 @@ function pageLoad(curr,putawayStatus) {
                             '<td>'+ dealStatus +'</td> ' +  // 交易状态
                             '<td> <p>'+ge_time_format(data[i].createTime)+'</p></td> ' +   //下单时间
                             '<td>'+ data[i].userName+'</td> ' +  // 买家账号
-                            '<td>'+ data[i].message+'</td> ' +  // 留言
+                            '<td class="name" title="'+data[i].message+'">'+ data[i].message+'</td> ' +  // 留言
                             '<td> <a href="javascript:void (0)" class="operateIcon deleteBtn"><i class="iconfont">&#xe601;</i></a></td> ' +
                             '</tr>';
 
@@ -150,12 +150,6 @@ $('#orderNoSettled').delegate(".deleteBtn","click",function(){
         content: '删除之后不可恢复，确定要删除么'
     });
 });
-
-
-//   设置cookie 模拟获取id
-
-document.cookie="id="+1;
-
 
 //  ===========================================================  搜索  ============================================
 

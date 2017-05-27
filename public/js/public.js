@@ -94,7 +94,7 @@ $.extend({'headLoad':function (src) {
                 storeName = arr.data.mjStore.storeName;
                 logo = arr.data.logo;
                 var token_id = arr.data.mjStore.id;
-                console.log("id: " +token_id);
+                // console.log("id: " +token_id);
                 document.cookie = "id="+ token_id;
                 document.cookie = "avatar=" + arr.data.logo;  // avatar
                 document.cookie = "cilentIm=" + arr.data.mjStore.cilentIm;   //  yxId

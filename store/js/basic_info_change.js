@@ -23,6 +23,7 @@ $(function () {
                 $("#name").val(data.userName);
                 $("#email").html(data.email);
                 $("#phone").val(data.tel);
+                $("#reservePhone").val(data.reserveNo);
                 $("#idCard").val(data.card);
                 $("#passport").val(data.passPortNo);
                 $("#addr").val(data.address);
@@ -34,6 +35,7 @@ $(function () {
                 $("#cateType").val(cateType);
                 $("#cateName").val(cateName);
                 $("#email_back").val(email);
+
                 // 商品分类
                 var fatherType;
                 switch(data.cateType){
@@ -113,6 +115,17 @@ $(document).ready(function() {
                     }
                 }
             },
+            reserveNo: {
+                validators: {
+                    notEmpty: {
+                        message: '手机不能为空'
+                    },
+                    regexp: {
+                        regexp: /^1[34578]\d{9}$/,
+                        message: '填写正确的手机号'
+                    }
+                }
+            },
             card: {
                 validators: {
                     notEmpty: {
@@ -124,32 +137,10 @@ $(document).ready(function() {
                     }
                 }
             },
-            passPortNo: {
-                validators: {
-                    notEmpty: {
-                        message: '护照编号不能为空'
-                    },
-                    regexp: {
-                        regexp: /^1[45][0-9]{7}|G[0-9]{8}|P[0-9]{7}|S[0-9]{7,8}|D[0-9]+$/,
-                        message: '护照编号格式不正确'
-                    }
-                }
-            },
             address: {
                 validators: {
                     notEmpty: {
                         message: '居住地址不能为空'
-                    }
-                }
-            },
-            creditNoCode:{
-                validators:{
-                    notEmpty:{
-                        message: '社会统一信用代码不能为空'
-                    },
-                    regexp:{
-                       regexp:/^[0-9A-Z]{18}$/,
-                        message: '社会统一信用代码格式不正确'
                     }
                 }
             }
@@ -160,18 +151,33 @@ $(document).ready(function() {
 
         $("#storeId").val(getCookie("id"));
 
-        var saleAddr = $(".filter-option").text();
-        console.log(saleAddr);
+        // var saleAddr = $(".filter-option").text();
+        // console.log(saleAddr);
+        //
+        // var saleAddrArray = saleAddr.split(", ");
+        // var str = "";
+        // for(var i=0;i<saleAddrArray.length;i++){
+        //     str = str + '"' + saleAddrArray[i] + '",';
+        // }
+        // str=str.substring(0,str.length-1);
+        // console.log("["+str+"]");
+        // $("#city").val("["+str+"]");
+        // console.log($("#city").val());
 
-        var saleAddrArray = saleAddr.split(", ");
+
         var str = "";
-        for(var i=0;i<saleAddrArray.length;i++){
-            str = str + '"' + saleAddrArray[i] + '",';
+        var salrAddrArray = new Array();
+        $("input[name=city]:checked").each(function () {
+            var saleAddrItem = $(this).val();
+            salrAddrArray.push(saleAddrItem);
+        });
+        for(var i=0;i<salrAddrArray.length;i++){
+            str = str + '"' + salrAddrArray[i] + '",';
         }
         str=str.substring(0,str.length-1);
-        console.log("["+str+"]");
-        $("#city").val("["+str+"]");
-        console.log($("#city").val());
+        var strResult = "["+ str+"]";
+
+        var country = $("#saleAddr").find("option:selected").val();
 
 
 
@@ -191,6 +197,83 @@ $(document).ready(function() {
             }
         }, 'json');
     });
+
+});
+
+
+
+$("#enterSubmit").click(function () {
+    var realName = $("#realName").val();
+    var idCard = $("#idCard").val();
+    var phone = $("#phone").val();
+    var addr = $("#addr").val();
+    var storeName = $("#storeName").val();
+    var reservePhone = $("#reservePhone").val();
+
+    var selectedOption = $(".firstClassification").find("option:selected").val();
+    var selectedSecOption = $(".secClassification").find("option:selected").text();
+
+    var storeType = $("#storeType").find("option:selected").val();
+    var succ = $("#succ").val();
+
+    var str = "";
+    var salrAddrArray = new Array();
+    $("input[name=city]:checked").each(function () {
+        var saleAddrItem = $(this).val();
+        salrAddrArray.push(saleAddrItem);
+    });
+    for(var i=0;i<salrAddrArray.length;i++){
+        str = str + '"' + salrAddrArray[i] + '",';
+    }
+    str=str.substring(0,str.length-1);
+    var strResult = "["+ str+"]";
+
+    var country = $("#saleAddr").find("option:selected").val();
+
+
+    if ( idCardTF ==1 && phoneTF == 1 && reservePhoneTF == 1 && realNameTF ==1 && storeName!="" && strResult!= "[]"){
+        $.ajax({
+            type:"post",
+            url:"http://192.168.1.111:8097/store/msg/update/infoCenter",
+            dataType:"json",
+            data:{
+                "email":email,
+                "name":realName,
+                "card":idCard,
+                "tel":phone,
+                "reserveNo":reservePhone,
+                "liveAddress":addr,
+                "storeName":storeName,
+                "storeType":storeType,
+                "cateType":selectedOption,                                      // 商品分类
+                "cateName":selectedSecOption,
+                "citys":strResult,
+                "countryName":country,
+                "creditNoCode":succ
+            },
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success:function (arr) {
+                if(arr.status==200){
+
+                    notie.alert(1, '注册成功!', 2);
+
+                    setTimeout(function () {
+                        window.history.back();
+                    },800)
+
+                }else{
+                    // window.location.href = "../../../login/login.html";
+
+                    notie.alert(3, '服务器忙，请稍后重试', 2);
+                }
+            },
+            error:function () {
+                notie.alert(3, '服务器忙，请稍后重试', 2);
+            }
+        })
+    }else{
+        notie.alert(2, '请填写完整信息', 2);
+    }
 
 });
 
