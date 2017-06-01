@@ -35,7 +35,6 @@ $("#uploadSubmit").click(function () {
         url:"http://192.168.1.111:8097/store/advert/add",
         dataType:"json",
         data:{"cropped":imgBase64,"status":status,"storeId":getCookie("id")},
-        timeout:5000,
         success:function (arr) {
 
             if(arr.status == 200){

@@ -831,6 +831,14 @@ body .dropdown-toggle{
     width: 100%;
 }
 
+.table-button{
+    background-color: #4a4a4a;
+    color: #fff;
+    border:1px solid #4a4a4a;
+    padding: 4px 6px;
+    border-radius: 3px;
+}
+
 .pubList table thead td{
     background-color: #4a4a4a;
     color: #fff;

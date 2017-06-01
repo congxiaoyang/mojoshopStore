@@ -60,7 +60,6 @@ function load() {
         mainW = 1280- leftMenuW;
     }
 
-
     // $(".storeMain").css({"width":mainW,"top":headH,"left":leftMenuW});
     var squareBoxW = $(".squareBox").width();
     $(".squareBox").css("height",squareBoxW);
@@ -76,10 +75,7 @@ function load() {
     console.log( "可视高度:"+ (winH-headH));
 }
 
-
-
 $.extend({'headLoad':function (src) {
-
 
     // 获取 token  得到用户信息
     var token = get_cookie("token");
@@ -110,7 +106,7 @@ $.extend({'headLoad':function (src) {
     
     var publicHead = '<div class="headInner clearfix"> ' +
         '<div class="logo fl"> ' +
-        '<a href="#"><img src="' + src+'public/images/logo.png" alt=""></a>' +
+        '<a href="././store/store_info.html"><img src="' + src+'public/images/logo.png" alt=""></a>' +
         '</div> ' +
         '<div class="fr"> ' +
         '<div class="col-lg-3 col-md-3 col-sm-3 text-left">' +

@@ -71,7 +71,7 @@ function pageLoad(curr,putawayStatus) {
 
                             '<td> <p>'+ge_time_format(data[i].createTime)+'</p></td> ' +   //创建时间
 
-                            '<td> <input type="button" value="同意" class="agree"> <input type="button" value="不同意" class="disagree"> </td> ' +
+                            '<td> <input type="button" value="同意" class="agree table-button"> <input type="button" value="不同意" class="disagree mt-20 table-button"> </td> ' +
                             '</tr>';
 
 

@@ -57,9 +57,9 @@ $("#saleAddr").change(function () {
     $("div.city_select").find("input[type='checkbox']").prop("checked",false);
     console.log($(this).find("option:selected").val());
     var selectCountry = $(this).find("option:selected").val();
-    if (selectCountry==1) {
+    if (selectCountry=="美国") {
         $("#America").removeClass("hidden").siblings("div.city_select").addClass("hidden");
-    }else if(selectCountry==2){
+    }else if(selectCountry=="英国"){
         $("#English").removeClass("hidden").siblings("div.city_select").addClass("hidden");
     }else{
         $("#Canada").removeClass("hidden").siblings("div.city_select").addClass("hidden");

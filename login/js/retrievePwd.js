@@ -159,7 +159,7 @@ $("#submit").click(function () {
                     notie.alert(3, '服务器繁忙，请稍后重试', 2);
                 }else if(arr.status==200){
                     notie.alert(1, '修改完成', 2);
-                    window.location.href = "../../../login/login.html";
+                    window.location.href = "../../../mojoshopStore/login/login.html";
                 }
             },
             error:function () {

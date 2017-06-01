@@ -63,7 +63,7 @@ function pageLoad(curr,putawayStatus) {
                         str += '<tr data-id = "' + data[i].id+'">' +
                             '<td>'+ data[i].id +'</td> ' +   //编号
                             '<td><img src="' + data[i].images + '" alt="图片加载失败"></td> ' +  // 图片
-                            '<td class="name">'+ data[i].title +'</td> ' +  // 商品名称
+                            '<td class="name" title="'+ data[i].title +'">'+ data[i].title +'</td> ' +  // 商品名称
                             '<td>'+ data[i].counts +'</td> ' +  // 商品数量
                             '<td class="redMark">￥'+ toDecimal2(data[i].money) +'</td> ' +  // 商品价格
                             '<td>'+ dealStatus +'</td> ' +  // 交易状态

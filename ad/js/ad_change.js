@@ -83,7 +83,6 @@ $("#changeSubmit").click(function () {
         url:"http://192.168.1.111:8097/store/advert/update",
         dataType:"json",
         data:{"cropped":img,"status":status,"storeId":getCookie("id"),"id":store_id},
-        timeout:5000,
         success:function (arr) {
 
             if(arr.status == 200){

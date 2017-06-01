@@ -8,9 +8,6 @@
 $(function () {
 
     var cookie = document.cookie;
-
-    console.log(getCookie("token"));
-
     $.ajax({
         type:"get",
         url:"http://192.168.1.111:8097/store/msg/search/store",
